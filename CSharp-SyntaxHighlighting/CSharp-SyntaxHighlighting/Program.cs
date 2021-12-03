@@ -21,10 +21,12 @@
             .Where(x => x % 2 == 0)
             .ToList();
         int i = _field + 5;
+        var en = TimeSpan.FromSeconds(_field);
         i *= 2;
         a += i;
         if (enum3 == MyEnum.Cond)
         {
+            int aaaaaaa = _field;
             string bStr = "53525\\5";
             string aStr = @"wtff";
             string cStr = $"interpolated   {r}";
