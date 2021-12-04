@@ -9,10 +9,11 @@
     }
     public string Prop { get; set; }
 
-    public void Method(int myParam, DateTime dt1, MyEnum enum3)
+    public void Method(int myParam, DateTime dt1, MyEnum enum3, MyStructRecord myStructRecord)
     {
-        // Comment
-        myParam = 4;
+        bool beq = myStructRecord.Equals(enum3);
+        // Comment - longer continuation
+        myParam = _field + 4;
         DateTime datetime = DateTime.Now;
         var dateTime2 = dt1;
         int a = 5 + -2 + 222222 + myParam;
@@ -20,7 +21,9 @@
         IEnumerable<int> r = Enumerable.Select(Enumerable.Range(0, 5), x => x)
             .Where(x => x % 2 == 0)
             .ToList();
-        int i = _field + 5;
+        MyClassRecord myClassRecord = new();
+        this.HelloEvent?.Invoke(this, DateOnly.FromDateTime(datetime));
+        int i = _field + myParam + 5 + _field;
         var en = TimeSpan.FromSeconds(_field);
         i *= 2;
         a += i;
@@ -28,8 +31,8 @@
         {
             int aaaaaaa = _field;
             string bStr = "53525\\5";
-            string aStr = @"wtff";
-            string cStr = $"interpolated   {r}";
+            string aStr = @"verbatim";
+            string cStr = $"interpolated    {r}";
             string dStr = $@"interpolated 2 {r}";
             bStr += aStr;
             aStr = dStr;
